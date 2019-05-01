@@ -1,11 +1,7 @@
 * {
     box-sizing: border-box;
+    font-family: 'Press Start 2P', 'Muli', sans-serif;
 }
-
-/*html { 
-    background: url(Images/hyruleField.jpg) no-repeat center center fixed;
-    background-size: cover;
-}*/
 
 body {
     width: 100%;
@@ -35,7 +31,8 @@ header {
     position: absolute;
     top: 50px;
     right: 30px;
-    font-size: 1.8em;
+    font-size: 1.4em;
+    display: none;
 }
 
 .score-li {
@@ -43,14 +40,46 @@ header {
     position: absolute;
     bottom: 50px;
     right: 30px;
-    font-size: 1.8em;
+    font-size: 1.4em;
+    display: none;
+}
+
+button:hover, input[type=radio]:hover, label:hover {
+    cursor: pointer;
+}
+
+
+.start-button {
+    width: 250px;
+    height: 140px;
+    position: absolute;
+    bottom: 30%;
+    left: 33%;
+    border: none;
+    background: url(Images/masterSword.jpeg) no-repeat;
+    background-size: 100%
+}
+
+.question-answer-form {
+    width: 800px;
+    height: 500px;
+    text-align: center;
+    background-color: lightgray;
+    /*opacity: 0.8;*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
 }
 
 .before-start {
-    width: 500px;
-    height: 300px;
+    width: 800px;
+    height: 500px;
     text-align: center;
-    /*background-color: aqua;*/
+    background-color: black;
+    color: white;
+    /*opacity: 0.8;*/
     position: absolute;
     left: 50%;
     top: 50%;
@@ -62,11 +91,32 @@ header {
     text-transform: uppercase;
 }
 
-.start-button {
-    width: 200px;
-    height: 60px;
-    position: absolute;
-    bottom: 50px;
-    right: 30%;
+fieldset {
+    border: none;
 }
+
+label {
+    display: block;
+    background-color: green;
+    margin: 20px;
+    font-size: 30px;
+    padding: 15px;
+}
+
+form {
+    background-color: aqua;
+    margin-top: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    vertical-align: middle;
+    margin: 0;
+
+}
+
+
+
 
