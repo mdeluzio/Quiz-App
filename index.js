@@ -90,11 +90,10 @@ function questionTemplate() {
 
 
 function startQuiz() {
-// This function should make the starting screen turn into the first question when the start button is clicked.
     $('.start-button').click(function(event) {
         $('.before-start').hide();
         $('.question-num').text(1);
-        $('.question-answer-form, .question-li, .score-li').css('display', 'block');
+        $('.question-answer-form, .question-ul, .score-ul').css('display', 'block');
 
         renderQuestion();
     })
@@ -114,12 +113,10 @@ function changeQuestion() {
 }
 
 function renderQuestion() {
-// This function should render the different questions and display them to the DOM
      $('.question-answer-form').html(questionTemplate());
 }
 
 function handleAnswer() {
-// this function should determine if the users answer was correct or incorrect and then display the proper feedback to the user
     $('.question-answer-form').submit(function(event){
         event.preventDefault();
         let choice = $('input:checked').val();
@@ -141,11 +138,10 @@ function increaseScore() {
 }
 
 function displayCorrect(isLast) {
-//this function should contain the html for the correct answer
-$('.question-answer-form').html(`<div class="correct-answer">
-<h3>You are correct!</h3>
-<button type="submit" class="next-question">Next Question</button>
-</div>`)
+    $('.question-answer-form').html(`<div class="correct-answer">
+    <h3>You are correct!</h3>
+    <button type="submit" class="next-question">Next Question</button>
+    </div>`)
 
 if (isLast) {
     $('.next-question').text("See Results");
@@ -154,7 +150,6 @@ if (isLast) {
 }
 
 function displayIncorrect(isLast) {
-//this function should contain the html for the wrong answers
     $('.question-answer-form').html(`<div class="incorrect-answer">
     <h3>You are incorrect</h3>
     <p>The correct answer was ${qBank[questionCount].rightAnswer}</p>
@@ -167,7 +162,6 @@ function displayIncorrect(isLast) {
 }
 
 function displayResults() {
-//this function should display the results to the user when the quiz is over
     if (totalScore === 10) {
         $('.question-answer-form').html(`<div class="results">
         <h3>Congratulations! You have a perfect score.</h3>
@@ -190,7 +184,6 @@ function displayResults() {
 }
 
 function restartQuiz() {
-//this function should let the user restart the quiz from the restart button at the end of the quiz and from the home button
     $('.question-answer-form').on('click', '.restart-quiz', function(event){
         location.reload();
     })
@@ -198,11 +191,7 @@ function restartQuiz() {
 
 function runFunctions() {
     startQuiz();
-    //renderQuestion();
     handleAnswer();
-    //displayCorrect();
-    //displayIncorrect();
-    //displayResults();
     restartQuiz();
     changeQuestion();
 }
