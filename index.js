@@ -21,7 +21,7 @@ const qBank = [
     },
     {
         question: 'What is Ganondorf\'s last name?',
-        answers: ['Dragmire', 'Gerudo', 'Nohansen', 'He does not have one'],
+        answers: ['Dragmire', 'Gerudo', 'Nohansen', 'None'],
         rightAnswer: 'Dragmire'
     },
     {
@@ -36,7 +36,7 @@ const qBank = [
     },
     {
         question: 'What is the name of Link\'s home island in The Wind Waker?',
-        answers: ['Outset Island', 'Windfall Island', 'Crescent Moon Island', 'Overlook Island'],
+        answers: ['Outset Island', 'Windfall Island', 'Crescent Island', 'Overlook Island'],
         rightAnswer: 'Outset Island'
     },
     {
@@ -46,7 +46,7 @@ const qBank = [
     },
     {
         question: 'In Breath of the Wild where is the Master Sword located?',
-        answers: ['Korok Forest', 'Hyrule Castle', 'Death Mountain', 'Spring of Courage'],
+        answers: ['Korok Forest', 'Hyrule Castle', 'Death Mountain', 'Lake Kolomo'],
         rightAnswer: 'Korok Forest'
     },
 ];
@@ -64,22 +64,22 @@ function questionTemplate() {
             <fieldset>
                 <label class="answerNum">
                     <input type="radio" value="${qBank[questionCount].answers[0]}" name="answer" required>
-                    <span>${qBank[questionCount].answers[0]}</span>
+                    <span class="ans">${qBank[questionCount].answers[0]}</span>
                 </label>
 
                 <label class="answerNum">
                     <input type="radio" value="${qBank[questionCount].answers[1]}" name="answer" required>
-                    <span>${qBank[questionCount].answers[1]}</span>
+                    <span class="ans">${qBank[questionCount].answers[1]}</span>
                 </label>
 
                 <label class="answerNum">
                     <input type="radio" value="${qBank[questionCount].answers[2]}" name="answer" required>
-                    <span>${qBank[questionCount].answers[2]}</span>
+                    <span class="ans">${qBank[questionCount].answers[2]}</span>
                 </label>
 
                 <label class="answerNum">
                     <input type="radio" value="${qBank[questionCount].answers[3]}" name="answer" required>
-                    <span>${qBank[questionCount].answers[3]}</span>
+                    <span class="ans">${qBank[questionCount].answers[3]}</span>
                 </label>
 
                 <button type="submit" class="submit-button">Submit</button>
@@ -170,19 +170,19 @@ function displayResults() {
 //this function should display the results to the user when the quiz is over
     if (totalScore === 10) {
         $('.question-answer-form').html(`<div class="results">
-        <h3>Congrats on a perfect score</h3>
+        <h3>Congratulations! You have a perfect score.</h3>
         <p>Your score is ${totalScore}/10</p>
         <button type="submit" class="restart-quiz">Restart Quiz!</button>
         </div>`)
     }       else if (totalScore <=9 && totalScore > 5) {
                 $('.question-answer-form').html(`<div class="results">
-                <h3>You did great</h3>
+                <h3>Great job, you really know your stuff!</h3>
                 <p>Your score is ${totalScore}/10</p>
                 <button type="submit" class="restart-quiz">Restart Quiz!</button>
                 </div>`)
             } else {
                 $('.question-answer-form').html(`<div class="results">
-                <h3>Trash</h3>
+                <h3>You can do better than that. Why not try again?</h3>
                 <p>Your score is ${totalScore}/10</p>
                 <button type="submit" class="restart-quiz">Restart Quiz!</button>
                 </div>`)

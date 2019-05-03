@@ -3,11 +3,6 @@
     font-family: 'Press Start 2P', 'Muli', sans-serif;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-}
-
 .home {
     height: 80px;
     width: 80px;
@@ -29,7 +24,8 @@ header {
 .question-li {
     list-style: none;
     position: absolute;
-    top: 50px;
+    /*top: 50px;*/
+    bottom: 760px;
     right: 30px;
     font-size: 1.4em;
     display: none;
@@ -99,23 +95,190 @@ label {
     display: block;
     background-color: green;
     margin: 20px;
-    font-size: 30px;
+    font-size: 20px;
     padding: 15px;
+    width: 65%
 }
 
 form {
     background-color: aqua;
     margin-top: 10px;
+}
+
+form label {
+    text-align: start;
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 5%;
+    height: 1.4em;
+    margin: 0;
+    margin-top: -1px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.submit-button {
+    height: 75px;
+    width: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -100px; 
+}
+
+.next-question, .restart-quiz {
+    height: 75px;
+    width: 200px;
+    align-self: center;
+}
+
+.incorrect-answer, .results {
+    width: 100%;
+    height: 100%;
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.correct-answer {
+    background-color: blueviolet;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-input {
-    vertical-align: middle;
-    margin: 0;
-
+.correct-answer h3 {
+    margin-top: 0;
+    padding-top: 250px;
+    font-size: 1.8em;
 }
+
+.incorrect-answer h3, .results h3 {
+    font-size: 1.8em;
+}
+
+.incorrect-answer p, .results p {
+    font-size: 1.4em;
+}
+
+/*@media screen and (min-width: 300px) {
+
+    
+    .before-start {
+        width: 90%;
+        height: 60%;
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+       justify-content: space-evenly;
+    }
+
+    .start-button {
+        width: 50%;
+        height: 28%;
+        border: none;
+        background: url(Images/masterSword.jpeg) no-repeat;
+        background-size: 100%;
+        position: static;
+    }
+
+    .before-start h1 {
+        font-size: .8em;
+    }
+
+    .home {
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        position: static;
+    }
+
+    .question-answer-form {
+        width: 90%;
+        height: 75%;
+        text-align: center;
+        background-color: lightgray;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+
+    .question-answer-form h2 {
+        font-size: .7em;
+        height: 81.6025px;
+        line-height: 14pt;
+    }
+
+    
+    .submit-button {
+    height: 50px;
+    width: 100px;
+    margin-left: -50px;
+    font-size: .6em;
+    }
+
+    input[type=radio] {
+        height: 12.667px;
+    }
+
+    label {
+        font-size: .5em;
+        height: 30px;
+    }
+
+    .score-li, .question-li {
+        font-size: .7em;
+    }
+    
+    .score-li {
+        bottom: 0;
+        left: 50%;
+        margin-left: -50px;
+    }
+
+
+    .question-li {
+        position: absolute;
+        top: normal;
+        height: 8px;
+        bottom: 20px;
+        left: 50%;
+        margin-left: -90px;
+    }
+
+    .next-question, .restart-quiz {
+        height: 50px;
+        width: 100px;
+        font-size: .6em;
+    }
+
+    
+    .correct-answer h3 {
+    margin-top: 0;
+    padding-top: 213px;
+    font-size: .8em;
+    }
+
+    .incorrect-answer h3, .results h3 {
+        font-size: .8em;
+        line-height: 18pt;
+    }
+    
+    .incorrect-answer p, .results p {
+        font-size: .6em;
+    }
+}*/
+
+
+
 
 
 
