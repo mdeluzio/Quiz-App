@@ -257,6 +257,7 @@ input[type=radio] {
         flex-direction: column;
         display: none;
         background: rgba(0, 0, 0, .95);
+        visibility: visible;
     }
 
 
@@ -310,6 +311,7 @@ input[type=radio] {
         height: 50px;
         width: 100px;
         font-size: .6em;
+        margin-bottom: 1px;
     }
 
     
