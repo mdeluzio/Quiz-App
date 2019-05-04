@@ -254,6 +254,7 @@ input[type=radio] {
         display: flex;
         flex-direction: column;
         display: none;
+        background: rgba(0, 0, 0, .95);
     }
 
 
