@@ -4,7 +4,7 @@
 }
 
 html {
-    background: url(Images/hyruleField.jpg) no-repeat center center fixed;
+    background: url(Images/hyruleField2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -92,7 +92,6 @@ button:hover, input[type=radio]:hover, label:hover {
     height: 500px;
     text-align: center;
     background: rgba(0, 0, 0, .95);
-    visibility: visible;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -256,8 +255,6 @@ input[type=radio] {
         display: flex;
         flex-direction: column;
         display: none;
-        background: rgba(0, 0, 0, .95);
-        visibility: visible;
     }
 
 
