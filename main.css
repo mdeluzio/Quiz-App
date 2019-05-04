@@ -84,6 +84,7 @@ button:hover, input[type=radio]:hover, label:hover {
     top: 0;
     left: 0;
     border-radius: 5px;
+    border: solid white 1px;
 }
 
 .question-answer-form {
@@ -91,6 +92,7 @@ button:hover, input[type=radio]:hover, label:hover {
     height: 500px;
     text-align: center;
     background: rgba(0, 0, 0, .95);
+    visibility: visible;
     position: absolute;
     left: 50%;
     top: 50%;
